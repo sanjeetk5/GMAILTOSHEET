@@ -71,23 +71,27 @@ cd GMAILTOSHEET
 
 🔹Step 2: Install Required Dependencies
 All required libraries are listed in requirements.txt.
+
         pip install -r requirements.txt
 
 
 
-🔹Step 4: Add Google OAuth Credentials
+🔹Step 3: Add Google OAuth Credentials
 Download credentials.json from Google Cloud Console
 Place it inside:
+
 credentials/credentials.json
 
 
-🔹Step 5: Configure Google Sheet
+🔹Step 4: Configure Google Sheet
 Update config.py with your Google Sheet details:
+
 SPREADSHEET_ID = "YOUR_SPREADSHEET_ID"
 SHEET_NAME = "Emails"
 
 
-🔹Step 6: Run the Application
+🔹Step 5: Run the Application
 Always run the project from the root directory using:
+
     python -m src.main
 
