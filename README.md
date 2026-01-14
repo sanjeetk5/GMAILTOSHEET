@@ -1,4 +1,5 @@
 Gmail to Google Sheets Automation
+
 Name: Sanjeet Kumar
 ---> Project Overview
 This project is a Python-based automation system that reads unread emails from Gmail and logs
