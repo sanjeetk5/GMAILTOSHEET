@@ -1,26 +1,44 @@
 Gmail to Google Sheets Automation
 
 Name: Sanjeet Kumar
+
 ---> Project Overview
+
 This project is a Python-based automation system that reads unread emails from Gmail and logs
 them into a Google Sheet.
+
 It ensures no duplicate entries, uses OAuth 2.0 authentication, and marks emails as read after
 processing.
+
 ---> Objective
+
 To demonstrate Gmail API and Google Sheets API integration using Python with proper state
 handling and duplicate prevention.
+
 --->High-Level Architecture
+
 Gmail Inbox → Gmail API → Python Script → Google Sheets API → Google Sheet
+
 --->Project Structure
+
 GMAILTOSHEET/
+
  src/
+ 
  credentials/
+ 
  config.py
+ 
  requirements.txt
+ 
  state.json
+
  .gitignore
+ 
  README.md
+ 
 --->OAuth Flow
+
 OAuth 2.0 Installed App Flow is used. Tokens are stored locally and refreshed automatically.
 --->Duplicate Prevention
 Processed Gmail message IDs are stored in state.json to avoid reprocessing emails.
