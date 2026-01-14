@@ -65,8 +65,10 @@ Google Sheets API enabled
 
 
 🔹Step 1: Clone the Repository
-git clone <your-repository-url>
-cd GMAILTOSHEET
+
+     git clone https://github.com/sanjeetk5/GMAILTOSHEET.git
+
+     cd GMAILTOSHEET
 
 
 🔹Step 2: Install Required Dependencies
@@ -86,8 +88,9 @@ credentials/credentials.json
 🔹Step 4: Configure Google Sheet
 Update config.py with your Google Sheet details:
 
-SPREADSHEET_ID = "YOUR_SPREADSHEET_ID"
-SHEET_NAME = "Emails"
+    SPREADSHEET_ID = "YOUR_SPREADSHEET_ID"
+
+    SHEET_NAME = "Emails"
 
 
 🔹Step 5: Run the Application
