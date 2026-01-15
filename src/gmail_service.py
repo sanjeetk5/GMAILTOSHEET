@@ -12,12 +12,12 @@ from config import SCOPES
 def get_gmail_service():
     creds = None
 
-    # token.json user ki OAuth session save karta hai
+    
     if os.path.exists('token.json'):
         with open('token.json', 'rb') as token:
             creds = pickle.load(token)
 
-    # Agar token invalid / nahi mila
+    
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
@@ -28,7 +28,6 @@ def get_gmail_service():
             )
             creds = flow.run_local_server(port=0)
 
-        # token save karo (DO NOT COMMIT)
         with open('token.json', 'wb') as token:
             pickle.dump(creds, token)
 

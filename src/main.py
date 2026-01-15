@@ -24,15 +24,15 @@ def main():
     messages = fetch_unread_emails(gmail_service)
 
     if not messages:
-        print("📭 No unread emails found.")
+        print("No unread emails found.")
         return
 
     for msg in messages:
         message_id = msg["id"]
 
-        # 🚫 Duplicate protection
+        
         if is_processed(message_id, state):
-            print("⏭️ Skipped duplicate email")
+            print("Skipped duplicate email")
             continue
 
         full_message = get_email_message(gmail_service, message_id)
@@ -42,7 +42,7 @@ def main():
         mark_email_as_read(gmail_service, message_id)
 
         mark_processed(message_id, state)
-        print("✅ Added:", email_data["subject"])
+        print("Added:", email_data["subject"])
 
     save_state(state)
     print("🎉 All emails processed successfully!")

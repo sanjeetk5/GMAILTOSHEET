@@ -9,17 +9,15 @@ from config import (
     SPREADSHEET_ID, 
     SHEET_NAME
 )
-# Same OAuth token will be reused
-SCOPES = [
-    'https://www.googleapis.com/auth/spreadsheets',
-    'https://www.googleapis.com/auth/gmail.modify'
-]
+
+# SCOPES = [
+#     'https://www.googleapis.com/auth/spreadsheets',
+#     'https://www.googleapis.com/auth/gmail.modify'
+# ]
 
 
 def get_sheets_service():
-    """
-    Google Sheets API service banata hai
-    """
+
     creds = None
 
     if os.path.exists('token.json'):
@@ -44,9 +42,7 @@ def get_sheets_service():
 
 
 def ensure_header_row(service):
-    """
-    Sheet mein header row exist karti hai ya nahi check karta hai
-    """
+ 
     range_name = f"{SHEET_NAME}!A1:D1"
     result = service.spreadsheets().values().get(
         spreadsheetId=SPREADSHEET_ID,

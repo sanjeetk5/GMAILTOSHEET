@@ -1,6 +1,6 @@
 import base64
 
-MAX_BODY_CHARS = 3000   # SAFE LIMIT
+MAX_BODY_CHARS = 3000   
 
 
 def get_header(headers, name):
@@ -27,11 +27,11 @@ def extract_email_data(message):
 
     body = ""
 
-    # Simple email
+    
     if payload.get("body", {}).get("data"):
         body = decode_body(payload["body"]["data"])
 
-    # Multipart email
+  
     elif payload.get("parts"):
         for part in payload["parts"]:
             if part.get("mimeType") == "text/plain":
